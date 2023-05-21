@@ -1,0 +1,32 @@
+name: 'dart-action'
+description: 'Use dart write action'
+author: 'CaiJingLong'
+
+inputs:
+  github-token:
+    description: 'The GitHub token to use for the action'
+    required: true
+  bin-name:
+    description: 'The dart file path of the action'
+    required: true
+    default: bin/main.dart
+
+runs:
+  using: composite
+  steps:
+    - uses: subosito/flutter-action@v2
+      name: Install Flutter
+      with:
+        channel: 'stable'
+        cache: true
+    - name: Show Flutter and dart version
+      run: |
+        dart --version
+        flutter --version
+      shell: bash
+    - name: Install dependencies
+      run: dart pub get
+      shell: bash
+    - name: Run dart
+      run: dart run ${{ inputs.bin-name }}
+      shell: bash

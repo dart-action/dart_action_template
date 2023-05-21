@@ -1,0 +1,15 @@
+name: dart_action_template
+description: A github action template for dart action
+version: 1.0.0
+repository: https://github.com/dart-action/dart_action_template
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  github_action_context: ^0.2.0
+  github_action_core: ^0.1.1+1
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
