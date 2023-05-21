@@ -25,7 +25,9 @@ runs:
         flutter --version
       shell: bash
     - name: show action files in shell
-      run: ls -al
+      run: |
+        pwd
+        ls -al
       shell: bash
       working-directory: ${{ env.GITHUB_ACTION_PATH }}
     - name: Install dependencies

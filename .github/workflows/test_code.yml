@@ -1,4 +1,4 @@
-name: "Check action"
+name: "Test dart code"
 
 on:
   push:
@@ -24,4 +24,7 @@ jobs:
       shell: bash
     - name: Run dart
       run: dart run bin/main.dart
+      shell: bash
+    - name: Run dart test
+      run: dart test
       shell: bash
