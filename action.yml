@@ -26,7 +26,8 @@ runs:
       shell: bash
     - name: Install dependencies
       run: dart pub get
+      working-directory: ${{ GITHUB_ACTION_PATH }}
       shell: bash
     - name: Run dart
-      run: dart run ${{ inputs.bin-name }}
+      run: dart run "${{ GITHUB_ACTION_PATH }}/${{ inputs.bin-name }}"
       shell: bash
