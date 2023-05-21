@@ -23,5 +23,5 @@ jobs:
       run: dart pub get
       shell: bash
     - name: Run dart
-      run: dart run ${{ inputs.bin-name }}
+      run: dart run bin/main.dart
       shell: bash

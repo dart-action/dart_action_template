@@ -1,0 +1,12 @@
+name: "Check action"
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dart-action/dart_action_template@v1
+        name: Run action
