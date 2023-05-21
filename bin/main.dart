@@ -2,18 +2,18 @@ import 'package:github_action_context/github_action_context.dart';
 import 'package:github_action_core/github_action_core.dart';
 
 void main(List<String> arguments) {
-  print('context.eventName: ${context.eventName}');
-  print('context.sha: ${context.sha}');
-  print('context.ref: ${context.ref}');
-  print('context.workflow: ${context.workflow}');
-  print('context.action: ${context.action}');
-  print('context.actor: ${context.actor}');
-  print('context.job: ${context.job}');
-  print('context.runNumber: ${context.runNumber}');
-  print('context.runId: ${context.runId}');
-  print('context.apiUrl: ${context.apiUrl}');
-  print('context.serverUrl: ${context.serverUrl}');
-  print('context.graphqlUrl: ${context.graphqlUrl}');
+  info('context.eventName: ${context.eventName}');
+  info('context.sha: ${context.sha}');
+  info('context.ref: ${context.ref}');
+  info('context.workflow: ${context.workflow}');
+  info('context.action: ${context.action}');
+  info('context.actor: ${context.actor}');
+  info('context.job: ${context.job}');
+  info('context.runNumber: ${context.runNumber}');
+  info('context.runId: ${context.runId}');
+  info('context.apiUrl: ${context.apiUrl}');
+  info('context.serverUrl: ${context.serverUrl}');
+  info('context.graphqlUrl: ${context.graphqlUrl}');
 
   startGroup('context.payload');
   info(context.payload.toString());
