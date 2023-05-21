@@ -1,2 +1,6 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Write action by dart
+
+## Getting Started
+
+1. Click `Use the template` button to create your own repository.
+2. Write dart code in `bin/main.dart`.
