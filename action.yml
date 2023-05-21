@@ -24,16 +24,14 @@ runs:
         dart --version
         flutter --version
       shell: bash
-    - name: show action files in shell
-      run: |
-        pwd
-        ls -al
+    - name: show the action path
       shell: bash
-      working-directory: ${{ env.GITHUB_ACTION_PATH }}
+      run: |
+        echo "runner.temp: ${{ runner.temp }}"
     - name: Install dependencies
       run: dart pub get
-      working-directory: ${{ env.GITHUB_ACTION_PATH }}
+      working-directory: ${{ runner.temp }}
       shell: bash
     - name: Run dart
-      run: dart run "${{ env.GITHUB_ACTION_PATH }}/${{ inputs.bin-name }}"
+      run: dart run "${{ runner.temp }}/${{ inputs.bin-name }}"
       shell: bash
