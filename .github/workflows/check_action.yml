@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: dart-action/dart_action_template@v1
+      - uses: dart-action/dart_action_template@main
         name: Run action
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
