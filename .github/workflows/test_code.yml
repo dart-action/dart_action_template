@@ -1,0 +1,26 @@
+name: "Check action"
+
+on:
+  push:
+  pull_request:
+
+jobs:  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: subosito/flutter-action@v2
+      name: Install Flutter
+      with:
+        channel: 'stable'
+        cache: true
+    - name: Show Flutter and dart version
+      run: |
+        dart --version
+        flutter --version
+      shell: bash
+    - name: Install dependencies
+      run: dart pub get
+      shell: bash
+    - name: Run dart
+      run: dart run ${{ inputs.bin-name }}
+      shell: bash
