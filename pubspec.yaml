@@ -7,8 +7,8 @@ environment:
   sdk: ^3.0.0
 
 dependencies:
-  github_action_context: ^0.2.0
-  github_action_core: ^0.1.1+1
+  github_action_context: ^0.2.0+1
+  github_action_core: ^0.1.1+2
 
 dev_dependencies:
   lints: ^2.0.0
